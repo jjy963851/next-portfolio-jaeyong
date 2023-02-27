@@ -41,7 +41,7 @@ export default function ProjectItem({data}){
             <div className="p-4 flex flex-col ">
             <h1 className = "text-2xl font-bold ">{title}</h1>
             <h3 className="mt-4 text-xl">{discription} </h3>
-            <a href= {gitHub} legacyBehavior >
+            <a href= {gitHub} >
             Goes to Github
             </a>
 

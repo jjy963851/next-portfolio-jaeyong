@@ -8,7 +8,7 @@ export default function Footer(){
     
     <Link href = "/" legacyBehavior>
     <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-      <span className="ml-3 text-xl">JaeYong's Portfolio</span>
+      <span className="ml-3 text-xl">JaeYong&apos;s Portfolio</span>
     </a>
     </Link>
 

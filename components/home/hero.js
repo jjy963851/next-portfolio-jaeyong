@@ -5,16 +5,16 @@ export default function Hero(){
       <>
        <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center ">
       <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium ">
-        Hello Everyone! I'm JaeYong
+        Hello Everyone! I&apos;m JaeYong
         <br className="hidden lg:inline-block"/>
         Welcome to my Portfolio Website!
       </h1>
       <p className="mb-8 leading-relaxed">
-        Hello, Everyone. Thanks for watching my Portfolio. I'm currently studying in La Roche University. I'm majoring Computer Scienece, and my goal is to become full stack developer! I hope you like my projects and if you have an interest, or any question about me, please click the contacts button at the top, and reach out to me! Thanks!
+        Hello, Everyone. Thanks for watching my Portfolio. I&apos;m currently studying in La Roche University. I&apos;m majoring Computer Scienece, and my goal is to become full stack developer! I hope you like my projects and if you have an interest, or any question about me, please click the contacts button at the top, and reach out to me! Thanks!
         </p>
       <div className="flex justify-center">
         <Link href = "/Projects" legacyBehavior>
-        <a className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Let's go Watch the Projects!</a>
+        <a className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Let&apos;s go Watch the Projects!</a>
         </Link>
       </div>
       </div>
