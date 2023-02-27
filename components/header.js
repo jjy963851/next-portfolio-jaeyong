@@ -1,5 +1,5 @@
 import Link from "next/link";
-import DarkModeToggleButton from "./dark-mode-toggle-button";
+
 
 export default function Header(){
 return(
@@ -23,7 +23,7 @@ return(
       <Link href = "/Projects" legacyBehavior>
         <a className="mr-5 hover:text-gray-900">Projects</a>
       </Link>
-      <Link href = "/contacts" legacyBehavior>
+      <Link href = "https://github.com/jjy963851" legacyBehavior>
         <a className="mr-5 hover:text-gray-900">Contacts</a>
       </Link>
     </nav>
