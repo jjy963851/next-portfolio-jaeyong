@@ -7,8 +7,8 @@ export default function ProjectItem({data}){
     const discription = data.properties.Description.rich_text[0]?.plain_text
     const imgSrc = data.cover.file?.url || data.cover.external.url
     const tags = data.properties.Tags.multi_select
-    const start = data.properties.workPeriod.date.start
-    const end = data.properties.workPeriod.date.end
+    const start = data.properties.workPeriod.date?.start
+    const end = data.properties.workPeriod.date?.end
     
     const calculatedPeriod = (start, end) => {
         const startDateStringArray = start.split('_');
