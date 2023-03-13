@@ -10,11 +10,11 @@ export default function Hero(){
         Welcome to my Portfolio Website!
       </h1>
       <p className="mb-8 leading-relaxed">
-        Hello, Everyone. Thanks for watching my Portfolio. I&apos;m currently studying in La Roche University. I&apos;m majoring Computer Scienece, and my goal is to become full stack developer! I hope you like my projects and if you have an interest, or any question about me, please click the contacts button at the top, and reach out to me! Thanks!
+        Hello, everyone. Thanks for watching my Portfolio. I&apos;m currently studying in La Roche University. I&apos;m majoring Computer Scienece, and my goal is to become full stack developer! I hope you like my projects and if you want to take a look more details about my projects, please visit my github! Thank you so much.
         </p>
       <div className="flex justify-center">
         <Link href = "/Projects" legacyBehavior>
-        <a className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Let&apos;s go Watch the Projects!</a>
+        <a className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Check out some of my projects</a>
         </Link>
       </div>
       </div>

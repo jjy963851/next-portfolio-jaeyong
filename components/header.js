@@ -12,7 +12,7 @@ return(
         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
         </svg>
         <span className="ml-3 text-xl">
-          JaeYongI&apos;s Portfolio
+          JaeYong&apos;s Portfolio
           </span>
         </a>
    </Link>
@@ -26,7 +26,7 @@ return(
         <a className="mr-5 hover:text-gray-900">Projects</a>
       </Link>
       <Link href = "https://github.com/jjy963851" legacyBehavior>
-        <a className="mr-5 hover:text-gray-900">Contacts</a>
+        <a className="mr-5 hover:text-gray-900">Github</a>
       </Link>
     </nav>
   
