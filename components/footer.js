@@ -7,8 +7,8 @@ export default function Footer(){
   <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     
     <Link href = "/" legacyBehavior>
-    <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900 dark:text-white">
-      <span className="ml-3 text-xl dark:text-white">JaeYong&apos;s Portfolio</span>
+    <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900 headerFont ">
+      <span className="ml-3 text-xl headerFont ">JaeYong&apos;s Portfolio</span>
     </a>
     </Link>
 
