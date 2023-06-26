@@ -21,3 +21,11 @@
     @apply inline-flex text-slate-900 dark:text-white
 }
 
+.heroFont {
+    @apply inline-flex text-slate-900 dark:text-white
+}
+
+.footerFont {
+    @apply inline-flex text-slate-900 dark:text-white
+}
+
