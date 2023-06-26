@@ -22,13 +22,13 @@ return(
     
     <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
       <Link href = "/" legacyBehavior>
-        <a className="mr-5 hover:text-gray-900 ">Home</a>
+        <a className="mr-5 hover:text-indigo-400 hover:font-semibold hover:scale-105 duration-300 ease-in ">Home</a>
       </Link>
       <Link href = "/Projects" legacyBehavior>
-        <a className="mr-5 hover:text-gray-900 ">Projects</a>
+        <a className="mr-5 hover:text-indigo-400 hover:font-semibold hover:scale-105 duration-300 ease-in ">Projects</a>
       </Link>
       <Link href = "https://github.com/jjy963851" legacyBehavior>
-        <a className="mr-5 hover:text-gray-900 ">Github</a>
+        <a className="mr-5 hover:text-indigo-400 hover:font-semibold hover:scale-105 duration-300 ease-in ">Github</a>
       </Link>
     </nav>
   
