@@ -18,5 +18,5 @@
 }
 
 .headerFont {
-    @apply text-white
+    @apply text-slate-900 dark:text-slate-200
 }
