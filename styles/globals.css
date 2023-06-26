@@ -18,6 +18,6 @@
 }
 
 .headerFont {
-    @apply inline-flex text-white dark:text-white
+    @apply inline-flex text-slate-900 dark:text-white
 }
 
