@@ -18,5 +18,10 @@
 }
 
 .headerFont {
-    @apply text-slate-900 dark:text-white
+    @apply  flex hover:scale-105
+    hover:shadow-lg
+    dark:border-gray-200/50
+    dark:hover:shadow-gray-400/40
+
+    hover:text-blue-600
 }

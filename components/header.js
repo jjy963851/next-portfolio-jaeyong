@@ -3,7 +3,8 @@ import Link from "next/link";
 
 export default function Header(){
 return(
-<>
+
+<div className="headerFont">
 <header className="text-gray-600 body-font headerFont">
 
   <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -33,7 +34,8 @@ return(
   
   </div>
 </header>
-</>
+</div>
+
 
 
 );
