@@ -17,3 +17,6 @@
             hover:text-blue-600
 }
 
+.header {
+    @apply text-slate-800 dark:text-white
+}
