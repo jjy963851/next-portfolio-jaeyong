@@ -4,9 +4,9 @@ export default function Hero(){
     return(
       <div className="Myhero">
        <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center  ">
-      <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium  ">
+      <h1 className=" sm:text-4xl text-3xl mb-4 font-medium  ">
         Hello Everyone! I&apos;m JaeYong
-        <br className="hidden lg:inline-block  "/>
+        <br className=" lg:inline-block  "/>
         Welcome to my Portfolio Website!
       </h1>
       <p className="mb-8 leading-relaxed ">
