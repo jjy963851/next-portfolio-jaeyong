@@ -5,7 +5,7 @@ export default function Header(){
 return(
 
 <>
-<header className="color">
+<header className="">
 
   <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center ">
    <Link href ="/" legacyBehavior>
