@@ -18,14 +18,14 @@
 }
 
 .color {
-    @apply flex flex-col m-3 rounded-xl w-full text-slate-900 dark:text-white
+    @apply flex flex-col m-3 rounded-xl w-full text-slate-900 dark:bg-indigo-500
 }
 
 .Myhero {
-    @apply inline-flex text-slate-900 dark:text-white
+    @apply inline-flex text-slate-900 dark:bg-indigo-500
 }
 
 .bottom {
-    @apply flex flex-col rounded-xl  text-slate-900 dark:text-white
+    @apply flex flex-col rounded-xl  text-slate-900 dark:bg-indigo-500
 }
 
