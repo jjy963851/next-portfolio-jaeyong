@@ -17,15 +17,15 @@
             hover:text-blue-600
 }
 
-.headerFont {
+.color {
+    @apply flex flex-col m-3 rounded-xl w-full text-slate-900 dark:text-white
+}
+
+.Myhero {
     @apply inline-flex text-slate-900 dark:text-white
 }
 
-.heroFont {
-    @apply inline-flex text-slate-900 dark:text-white
-}
-
-.footerFont {
-    @apply inline-flex text-slate-900 dark:text-white
+.bottom {
+    @apply flex flex-col rounded-xl  text-slate-900 dark:text-white
 }
 

@@ -5,7 +5,7 @@ export default function Header(){
 return(
 
 <>
-<header className="">
+<header className="color">
 
   <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center ">
    <Link href ="/" legacyBehavior>
@@ -20,7 +20,7 @@ return(
    </Link>
    
     
-    <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+    <nav className="md:ml-auto flex flex-wrap items-center text-base ">
       <Link href = "/" legacyBehavior>
         <a className="mr-5 hover:text-indigo-400 hover:font-semibold hover:scale-105 duration-300 ease-in ">Home</a>
       </Link>
