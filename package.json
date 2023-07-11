@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "homepage": "https://jjy963851.com",
   "dependencies": {
     "@next/font": "13.1.6",
     "dotenv": "^16.0.3",
