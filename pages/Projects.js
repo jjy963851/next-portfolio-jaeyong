@@ -1,10 +1,10 @@
 import Layout from "@/components/layout";
 import Head from "next/head";
-import { TOKEN, DATABASE_ID} from "@/config";
+
 import ProjectItem from "@/components/projects/project-item";
 export default function Projects({projects}){
   
-    
+
 
     return(
         <Layout >
@@ -32,7 +32,8 @@ export default function Projects({projects}){
 }
 
 export async function getStaticProps(){
-
+    const TOKEN = process.env.NOTION_TOKEN;
+    const DATABASE_ID = process.env.NOTION_DATABASE_ID;
 
     const options = {
         method: 'POST',

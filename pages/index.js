@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Layout from '@/components/layout'
 import Hero from '@/components/home/hero'
-
+import dotenv from 'dotenv';
 
 export default function Home() {
+  dotenv.config();
   return (
     <Layout>
       <Head>

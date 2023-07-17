@@ -11,7 +11,7 @@
   "homepage": "https://jjy963851.com",
   "dependencies": {
     "@next/font": "13.1.6",
-    "dotenv": "^16.0.3",
+    "dotenv": "^16.3.1",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "next": "13.1.6",
