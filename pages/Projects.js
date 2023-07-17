@@ -31,7 +31,7 @@ export default function Projects({projects}){
     );
 }
 
-export async function getServerSideProps(){
+export async function getStaticProps(){
 
 
     const options = {
