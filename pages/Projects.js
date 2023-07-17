@@ -16,10 +16,11 @@ export default function Projects({projects}){
                 <link rel="icon" href="/favicon.ico" />
             </Head>
         
-        <h1 className="text-4xl font-bold sm:text-6xl">
-           Total Projects : 
-           <span className="pl-4 text-blue-500">{projects.results.length} </span>
-        </h1>
+            <h1 className="text-4xl font-bold sm:text-6xl">
+  Total Projects :
+  <span className="pl-4 text-blue-500">{projects.results?.length || 0}</span>
+</h1>
+
 
         <div className = "grid grid-cols-1 md:grid-cols-2 py-10 m-6 gap-8 ">
         {projects.results.map((aProject)=>(
@@ -63,6 +64,7 @@ export async function getStaticProps(){
         aProject.properties?.Name?.title[0]?.plain_text
       ));
       
+      console.log('projects:', projects);
 
      
      console.log(`project Names: ${projectNames}`);
