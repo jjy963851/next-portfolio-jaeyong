@@ -1,10 +1,11 @@
 import Layout from "@/components/layout";
 import Head from "next/head";
-
+import dotenv from 'dotenv';
 import ProjectItem from "@/components/projects/project-item";
+dotenv.config();
 export default function Projects({projects}){
   
-
+    
 
     return(
         <Layout >
