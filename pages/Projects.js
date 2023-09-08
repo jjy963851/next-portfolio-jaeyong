@@ -1,8 +1,8 @@
 import Layout from "@/components/layout";
 import Head from "next/head";
-import dotenv from 'dotenv';
+
 import ProjectItem from "@/components/projects/project-item";
-dotenv.config();
+
 export default function Projects({projects}){
   
     
@@ -32,7 +32,7 @@ export default function Projects({projects}){
     );
 }
 
-export async function getStaticProps(){
+export async function getServerSideProps(){
     const TOKEN = process.env.NOTION_TOKEN;
     const DATABASE_ID = process.env.NOTION_DATABASE_ID;
 
@@ -65,10 +65,10 @@ export async function getStaticProps(){
         aProject.properties?.Name?.title[0]?.plain_text
       ));
       
-        console.log('projects:', projects);
+        //console.log('projects:', projects);
 
      
-     console.log(`project Names: ${projectNames}`);
+    // console.log(`project Names: ${projectNames}`);
 
     return{
         props: {projects},

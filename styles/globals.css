@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .btn-Projects {
-    @apply inline-flex text-white dark:text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg
+    @apply inline-flex  bg-indigo-500 border py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg
 }
 
 .project-card {
@@ -11,10 +11,67 @@
             transition duration-300 transform border border-gray-300
             hover:scale-105
             hover:shadow-lg
-            dark:border-gray-200/50
-            dark:hover:shadow-gray-400/40
+            bg-blue-600
+            text-white
 
-            hover:text-blue-600
+            hover:text-black
 }
 
 
+body{
+    margin: 0;
+    background: #303030;
+    color:'white';
+  }
+  .text-stroke {
+    -webkit-text-stroke: 1px white; /* Safari/Chrome */
+    
+    color: pink; /* 텍스트 색상 */
+  }
+
+  .text-sub {
+    -webkit-text-stroke: 1px orange; /* Safari/Chrome */
+    
+    color: white; /* 텍스트 색상 */
+  }
+
+  .text-title {
+    -webkit-text-stroke: 2px pink; /* Safari/Chrome */
+    
+    color: white; /* 텍스트 색상 */
+  }
+
+  .text-tab {
+    -webkit-text-stroke: 1px plum; /* Safari/Chrome */
+    
+    color: black; /* 텍스트 색상 */
+  }
+
+
+
+
+
+  /* image-transitions.css */
+
+  /* 이미지에 적용될 클래스 */
+  .image-transition-enter {
+    opacity: 0; /* 이미지가 처음에 투명합니다. */
+    transform: scale(0.8); /* 이미지가 처음에 작게 시작합니다. */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* 트랜지션 효과를 설정합니다. */
+  }
+  
+  .image-transition-enter-active {
+    opacity: 1; /* 이미지가 나타나면 투명도를 증가시킵니다. */
+    transform: scale(1); /* 이미지가 커지면서 나타납니다. */
+  }
+  
+  .image-transition-exit {
+    opacity: 1; /* 이미지가 나가기 전에 투명도를 높게 유지합니다. */
+    transform: scale(1); /* 이미지가 나가기 전에 크기를 유지합니다. */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* 트랜지션 효과를 설정합니다. */
+  }
+  
+  .image-transition-exit-active {
+    opacity: 0; /* 이미지가 사라지면 투명도를 줄입니다. */
+    transform: scale(0.8); /* 이미지가 작아지면서 사라집니다. */
+  }
