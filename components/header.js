@@ -10,9 +10,9 @@ return(
   <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center ">
    <Link href ="/" legacyBehavior>
         <a className="flex  font-medium items-center  mb-4 md:mb-0">
-        <span class="text-sub ml-3 text-xl dark:text-white  transition  group">
-        <span class="group-hover:hidden ">JaeYong&apos;s Portfolio</span>
-        <span class="group-hover:block hidden ">Web Developer</span>
+        <span className="text-sub ml-3 text-xl dark:text-white  transition  group">
+        <span className="group-hover:hidden ">JaeYong&apos;s Portfolio</span>
+        <span className="group-hover:block hidden ">Web Developer</span>
       </span>
         </a>
    </Link>
