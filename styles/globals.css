@@ -7,20 +7,20 @@
 }
 
 .project-card {
-    @apply flex flex-col m-3 rounded-xl w-full
+    @apply flex flex-col m-3 rounded-xl w-full relative
             transition duration-300 transform border border-gray-300
             hover:scale-105
             hover:shadow-lg
-            bg-blue-600
+            bg-slate-800
             text-white
 
-            hover:text-black
+            
 }
 
 
 body{
     margin: 0;
-    background: #303030;
+    background: #1B1B1B;
     color:'white';
   }
   .text-stroke {
@@ -30,7 +30,7 @@ body{
   }
 
   .text-sub {
-    -webkit-text-stroke: 1px orange; /* Safari/Chrome */
+    -webkit-text-stroke: 1px #F4F0EC; /* Safari/Chrome */
     
     color: white; /* 텍스트 색상 */
   }

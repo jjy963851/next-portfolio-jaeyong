@@ -5,7 +5,7 @@ export default function Header(){
 return(
 
 <>
-<header className="">
+<header className=" ring-1 ring-slate-500 shadow-lg mb-5">
 
   <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center ">
    <Link href ="/" legacyBehavior>
@@ -20,13 +20,13 @@ return(
     
     <nav className="md:ml-auto flex flex-wrap items-center text-base ">
       <Link href = "https://www.linkedin.com/in/jaeyong963851/" legacyBehavior>
-        <a className="mr-5 text-sub  hover:scale-110 duration-300 ease-in ">Linked In</a>
+        <a className="mr-5 text-sub  hover:underline ">Linked In</a>
       </Link>
       <Link href = "/Projects" legacyBehavior>
-        <a className="mr-5 text-sub   hover:scale-110 duration-300 ease-in">Projects</a>
+        <a className="mr-5 text-sub   hover:underline">Projects</a>
       </Link>
       <Link href = "https://github.com/jjy963851" legacyBehavior>
-        <a className="mr-5 text-sub  hover:scale-110 duration-300 ease-in ">Github</a>
+        <a className="mr-5 text-sub  hover:underline ">Github</a>
       </Link>
     </nav>
   

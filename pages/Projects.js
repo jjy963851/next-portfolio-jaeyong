@@ -9,7 +9,7 @@ export default function Projects({projects}){
 
     return(
         <Layout >
-            <div className=" flex flex-col items-center justify-center min-h-screen px-5 mb-10">
+            <div className=" flex flex-col items-center justify-center  px-5 mb-10">
              <Head>
                 <title>JaeYong Chang Portfolio</title>
                 <meta name="description" content="Today's also fighting " />
@@ -22,9 +22,11 @@ export default function Projects({projects}){
            <span className="pl-4 text-blue-500">{projects.results.length} </span>
         </h1>
 
-        <div className = "grid grid-cols-1 md:grid-cols-2 py-10 m-6 gap-8 ">
+        <div className = "grid grid-cols-1 md:grid-cols-2 py-10 gap-10">
         {projects.results.map((aProject)=>(
+                <div className="h-full flex">
                  <ProjectItem key = {aProject.id} data = {aProject}/>
+                 </div>
         ))}
         </div>
         </div>
@@ -33,8 +35,8 @@ export default function Projects({projects}){
 }
 
 export async function getServerSideProps(){
-    const TOKEN = process.env.NOTION_TOKEN;
-    const DATABASE_ID = process.env.NOTION_DATABASE_ID;
+    const NOTION_TOKEN = process.env.NOTION_TOKEN;
+    const NOTION_DATABASE_ID = process.env.NOTION_DATABASE_ID;
 
     const options = {
         method: 'POST',
@@ -42,7 +44,7 @@ export async function getServerSideProps(){
           accept: 'application/json',
           'Notion-Version': '2022-06-28',
           'content-type': 'application/json',
-          Authorization: `Bearer ${TOKEN}`
+          Authorization: `Bearer ${NOTION_TOKEN}`
         },
         body: JSON.stringify({
             sorts: [
@@ -57,7 +59,7 @@ export async function getServerSideProps(){
         })
       };
       
-     const res = await fetch(`https://api.notion.com/v1/databases/${DATABASE_ID}/query`, options)
+     const res = await fetch(`https://api.notion.com/v1/databases/${NOTION_DATABASE_ID}/query`, options)
       
      const projects = await res.json();
 

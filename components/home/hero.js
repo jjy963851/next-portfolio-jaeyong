@@ -18,7 +18,7 @@ const images = [
 ];
 
 
-export default function Hero(){
+export default function Hero() {
 
   const [showImages, setShowImages] = useState(false);
   const [showParagraph, setShowParagraph] = useState(false);
@@ -31,16 +31,16 @@ export default function Hero(){
 
   const toggleParagraph = () => {
     setShowParagraph(!showParagraph);
-    setShowImages(false); 
+    setShowImages(false);
   };
 
   useEffect(() => {
     if (showImages && currentImageIndex < images.length - 1) {
       const delay = 1500; // 이미지가 나타나는 간격 (1초로 설정)
-    
+
       const interval = setInterval(() => {
         setCurrentImageIndex((prevIndex) => prevIndex + 1);
-      }, delay );
+      }, delay);
 
       return () => {
         clearInterval(interval); // 컴포넌트가 언마운트되면 타이머를 정리합니다.
@@ -50,45 +50,45 @@ export default function Hero(){
 
 
 
- 
 
 
 
-    return(
-      <>
-       <div className="flex flex-justify-between lg:mx-40    ">
 
-        <div className="flex-col  lg:pr-24 md:pr-16  md:items-start md:text-left">
-       <h1 className="text-title  text-lg md:text-xl lg:text-4xl mb-4 font-medium dark:text-white  ">
-        Hello Everyone! I&apos;m JaeYong
-        <br  className="  lg:inline-block dark:text-white "/>
-        Welcome to my Portfolio Website!
-      </h1>
-      <p className=" text-stroke  mb-8 leading-relaxed dark:text-white w-1/2 text-left ">
-        Hello, everyone. Thanks for watching my Portfolio. I&apos;m currently studying in La Roche University. I&apos;m majoring Computer Scienece, and my goal is to become full stack developer! I hope you like my projects and if you want to take a look more details about my projects, please visit my github! Thank you so much.
-        </p>
+  return (
+    <>
+      <div className="md:flex ">
 
-        <div className="flex justify-start">
-        <Link href = "/Projects" legacyBehavior>
-        <a className="inline-flex text-sub border-0 py-2 px-6 focus:outline-none hover:bg-yellow-200 hover:scale-90 duration-300 rounded text-lg">Check out some of my projects</a>
-        </Link>
-      </div>
+        <div className="flex flex-col items-center lg:pr-24 md:pr-16  md:items-start md:text-left">
+          <h1 className="text-title  text-lg md:text-xl lg:text-4xl mb-4 font-medium dark:text-white  ">
+            Hello Everyone! I&apos;m JaeYong
+            <br className="  lg:inline-block dark:text-white " />
+            Welcome to my Portfolio Website!
+          </h1>
+          <p className=" text-stroke  mb-8 leading-relaxed dark:text-white w-full text-left ">
+            Hello, everyone. Thanks for watching my Portfolio. I&apos;m currently studying in La Roche University. I&apos;m majoring Computer Scienece, and my goal is to become full stack developer! I hope you like my projects and if you want to take a look more details about my projects, please visit my github! Thank you so much.
+          </p>
 
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 ">
-            <Animation/>
-        </div>
-        </div>
-
-
-
-        <div className="w-full  p-10">
-          <div className="flex justify-evenly">
-              <button onClick={toggleImages} className="text-xl text-sub hover:scale-110 duration-300 mb-10">What are my Skills?</button>
-              <button onClick={toggleParagraph} className="text-xl text-sub hover:scale-110 duration-300 mb-10">Why?</button>
+          <div className="flex justify-start">
+            <Link href="/Projects" legacyBehavior>
+              <a className="inline-flex text-title border-0 py-2 px-6 focus:outline-none hover:bg-gray-600 hover:scale-90 duration-300 rounded text-lg">Check out some of my projects</a>
+            </Link>
           </div>
 
-         
-          <div className={`grid sm:grid-cols-1 md:grind-cols-2 xl:grid-cols-3 gap-3 ${showImages ? "" : 'hidden'}`}>
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 ">
+            <Animation />
+          </div>
+        </div>
+
+
+
+        <div className="w-full ">
+          <div className="flex justify-between gap-x-5">
+            <button onClick={toggleImages} className="text-xl text-title hover:scale-110 duration-300 mb-10">What are my Skills?</button>
+            <button onClick={toggleParagraph} className="text-xl text-title hover:scale-110 duration-300 mb-10">Why?</button>
+          </div>
+
+
+          <div className={`grid grid-cols-3 gap-3 ${showImages ? "" : 'hidden'}`}>
             {images.map((imageSrc, index) => (
               <CSSTransition
                 key={index}
@@ -99,7 +99,7 @@ export default function Hero(){
                 <img
                   alt="icon"
                   src={imageSrc}
-                  className=" rounded-lg w-full h-full object-relative"
+                  className=" rounded-lg  md:w-full h-full object-relative"
                   style={{ transitionDelay: `${index * 500}ms` }}
                 />
               </CSSTransition>
@@ -109,37 +109,33 @@ export default function Hero(){
 
 
 
-          <div className={` ${showParagraph ? '' : 'hidden'}`}>
-          <CSSTransition
-                
-                in={showParagraph}
-                timeout={3000 }
-                classNames={`image-transition`}
-              >
-            <p className=" leading-10 text-lg text-stroke  font-normal">
-            So far, while developing websites using Next.js and React.js, 
-            what I&apos;ve noticed is that the current trend is the mobile market. 
-            Everyone has a smartphone, and it&apos;s a part of their daily lives. 
-            To enhance accessibility and keep up with rapidly changing trends, 
-            I&apos;m also preparing for mobile development. 
-            I believe that staying up-to-date with constantly 
-            evolving trends is a crucial skill for web developers.
+          <div className={` ${showParagraph ? '' : 'hidden'} `}>
+            <CSSTransition
 
-            Therefore, I&apos;ve been using React-Native for developing IOS app with Expo-go.
-            Make a build and import IPA file with X-code and deploy at Test Flight before
-            realese to IOS market. 
-            </p>
-          </CSSTransition>
+              in={showParagraph}
+              timeout={3000}
+              classNames={`image-transition`}
+            >
+              <p className=" leading-7 text-lg text-white font-mono w-full text-start ">
+                I began my front-end development journey with Vanilla JavaScript, HTML, and CSS through online lectures. While working on a small project,
+                 I naturally found myself yearning for a more efficient way to write my code. That&apos;s when I discovered React.js. With its vast community 
+                 and popularity among front-end developers, I delved into learning React.js. However, as I continued creating small web apps, I encountered 
+                 challenges with page routing. Managing multiple pages involved handling numerous props and states, which seemed cumbersome. This led me to 
+                 explore further, and I realized that React.js is particularly well-suited for Single Page Applications (SPAs).
+                In my journey of building web apps step by step, I eventually discovered the Next.js framework. It not only offers dynamic routes but also provides 
+                flexibility in choosing between client-side rendering and server-side rendering. It felt like a whole new world, and I appreciated the ability to make flexible choices between React.js and Next.js based on the characteristics of each app.
+              </p>
+            </CSSTransition>
           </div>
-        
+
 
         </div>
 
 
 
       </div>
-      </>
-    );
+    </>
+  );
 }
 
 {/**
