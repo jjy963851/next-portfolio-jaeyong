@@ -24,8 +24,8 @@ export default function Projects({projects}){
 
         <div className = "grid grid-cols-1 md:grid-cols-2 py-10 gap-10">
         {projects.results.map((aProject)=>(
-                <div className="h-full flex">
-                 <ProjectItem key = {aProject.id} data = {aProject}/>
+                <div key={aProject.id} className="h-full flex">
+                 <ProjectItem  data = {aProject}/>
                  </div>
         ))}
         </div>
