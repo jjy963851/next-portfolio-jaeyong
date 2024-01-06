@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 
+
+
 const images = [
   "/next.png",
   "/tailwind.png",
@@ -17,12 +19,22 @@ const images = [
   "/jira.png"
 ];
 
+const listItems = [
+  'ReactJS',
+  'Next.js',
+  'React-Native',
+  'CSS',
+  'Responsive Design',
+  'Creative',
+  'Team player',
+];
 
 export default function Hero() {
 
   const [showImages, setShowImages] = useState(false);
   const [showParagraph, setShowParagraph] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentParagraphIndex, setCurrentParagraphIndex] = useState(0);
 
   const toggleImages = () => {
     setShowImages(!showImages);
@@ -50,13 +62,26 @@ export default function Hero() {
 
 
 
+  useEffect(() => {
+    if (showParagraph && currentParagraphIndex < listItems.length - 1) {
+      const delay = 1500; // 이미지가 나타나는 간격 (1초로 설정)
+
+      const interval = setInterval(() => {
+        setCurrentParagraphIndex((prevIndex) => prevIndex + 1);
+      }, delay);
+
+      return () => {
+        clearInterval(interval); // 컴포넌트가 언마운트되면 타이머를 정리합니다.
+      };
+    }
+  }, [showParagraph, currentParagraphIndex, listItems.length]);
 
 
 
 
   return (
     <>
-      <div className="md:flex ">
+      <div className="md:flex Hero">
 
         <div className="flex flex-col items-center lg:pr-24 md:pr-16  md:items-start md:text-left">
           <h1 className="text-title  text-lg md:text-xl lg:text-4xl mb-4 font-medium dark:text-white  ">
@@ -65,7 +90,7 @@ export default function Hero() {
             Welcome to my Portfolio Website!
           </h1>
           <p className=" text-stroke  mb-8 leading-relaxed dark:text-white w-full text-left ">
-            Hello, everyone. Thanks for watching my Portfolio. I&apos;m currently studying in La Roche University. I&apos;m majoring Computer Scienece, and my goal is to become full stack developer! I hope you like my projects and if you want to take a look more details about my projects, please visit my github! Thank you so much.
+            Hello, everyone. Thanks for watching my Portfolio. I&apos;ve graduated B.S Computer Science in La Roche University. I&apos;m trying to be a best Front-End Developer! I hope you like my projects and if you want to take a look more details about my projects, please visit my github! Thank you so much.
           </p>
 
           <div className="flex justify-start">
@@ -84,7 +109,7 @@ export default function Hero() {
         <div className="w-full ">
           <div className="flex justify-between gap-x-5">
             <button onClick={toggleImages} className="text-xl text-title hover:scale-110 duration-300 mb-10">What are my Skills?</button>
-            <button onClick={toggleParagraph} className="text-xl text-title hover:scale-110 duration-300 mb-10">Why?</button>
+            <button onClick={toggleParagraph} className="text-xl text-title hover:scale-110 duration-300 mb-10">Strength</button>
           </div>
 
 
@@ -99,7 +124,7 @@ export default function Hero() {
                 <img
                   alt="icon"
                   src={imageSrc}
-                  className=" rounded-lg  md:w-full h-full object-relative"
+                  className=" rounded-lg w-1/2 md:w-full  h-full object-relative"
                   style={{ transitionDelay: `${index * 500}ms` }}
                 />
               </CSSTransition>
@@ -109,23 +134,27 @@ export default function Hero() {
 
 
 
-          <div className={` ${showParagraph ? '' : 'hidden'} `}>
+          <div className={` flex flex-col text-xl font-semibold gap-y-10 ${showParagraph ? '' : 'hidden'} `}>
+          {listItems.map((item, index) => (
             <CSSTransition
-
+            key={index}
               in={showParagraph}
-              timeout={3000}
+              timeout={3000 + index * 200}
               classNames={`image-transition`}
             >
-              <p className=" leading-7 text-lg text-white font-mono w-full text-start ">
-                I began my front-end development journey with Vanilla JavaScript, HTML, and CSS through online lectures. While working on a small project,
-                 I naturally found myself yearning for a more efficient way to write my code. That&apos;s when I discovered React.js. With its vast community 
-                 and popularity among front-end developers, I delved into learning React.js. However, as I continued creating small web apps, I encountered 
-                 challenges with page routing. Managing multiple pages involved handling numerous props and states, which seemed cumbersome. This led me to 
-                 explore further, and I realized that React.js is particularly well-suited for Single Page Applications (SPAs).
-                In my journey of building web apps step by step, I eventually discovered the Next.js framework. It not only offers dynamic routes but also provides 
-                flexibility in choosing between client-side rendering and server-side rendering. It felt like a whole new world, and I appreciated the ability to make flexible choices between React.js and Next.js based on the characteristics of each app.
-              </p>
+             
+               
+                  <li 
+                  
+                  style={{ transitionDelay: `${index * 500}ms` }}>
+                    <span className=" ring-offset-1 bg-slate-800 text-blue-600  rounded-lg p-2 cursor-pointer hover:scale-95 duration-200 ease-in hover:text-slate-200">
+                    {item}
+                    </span>
+                    </li>
+              
+              
             </CSSTransition>
+              ))}
           </div>
 
 
