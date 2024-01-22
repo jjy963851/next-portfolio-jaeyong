@@ -2,172 +2,247 @@
 @tailwind components;
 @tailwind utilities;
 
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
 }
 .btn-Projects {
-    @apply inline-flex  bg-indigo-500 border py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg
+  @apply inline-flex  bg-indigo-500 border py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg;
 }
 
 .project-card {
-    @apply flex flex-col m-3 rounded-xl w-full relative
+  @apply flex flex-col m-3 rounded-xl w-full relative
             transition duration-300 transform border border-gray-300
             hover:scale-105
             hover:shadow-lg
             bg-slate-800
-            text-white
-
-            
+            text-white;
 }
 
+body {
+  margin: 0;
+  background: #1b1b1b;
+  color: "white";
+}
+.text-stroke {
+  -webkit-text-stroke: 1px white; /* Safari/Chrome */
 
-body{
-    margin: 0;
-    background: #1B1B1B;
-    color:'white';
-  }
-  .text-stroke {
-    -webkit-text-stroke: 1px white; /* Safari/Chrome */
-    
-    color: pink; /* 텍스트 색상 */
-  }
+  color: pink; /* 텍스트 색상 */
+}
 
-  .text-sub {
-    -webkit-text-stroke: 1px #F4F0EC; /* Safari/Chrome */
-    
-    color: white; /* 텍스트 색상 */
-  }
+.text-sub {
+  -webkit-text-stroke: 1px #f4f0ec; /* Safari/Chrome */
 
-  .text-title {
-    -webkit-text-stroke: 2px pink; /* Safari/Chrome */
-    
-    color: white; /* 텍스트 색상 */
-  }
+  color: white; /* 텍스트 색상 */
+}
 
-  .text-tab {
-    -webkit-text-stroke: 1px plum; /* Safari/Chrome */
-    
-    color: black; /* 텍스트 색상 */
-  }
+.text-title {
+  -webkit-text-stroke: 2px pink; /* Safari/Chrome */
 
+  color: white; /* 텍스트 색상 */
+}
 
+.text-tab {
+  -webkit-text-stroke: 1px plum; /* Safari/Chrome */
 
+  color: black; /* 텍스트 색상 */
+}
 
+/* image-transitions.css */
 
-  /* image-transitions.css */
+/* 이미지에 적용될 클래스 */
+.image-transition-enter {
+  opacity: 0; /* 이미지가 처음에 투명합니다. */
+  transform: scale(0.8); /* 이미지가 처음에 작게 시작합니다. */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* 트랜지션 효과를 설정합니다. */
+}
 
-  /* 이미지에 적용될 클래스 */
-  .image-transition-enter {
-    opacity: 0; /* 이미지가 처음에 투명합니다. */
-    transform: scale(0.8); /* 이미지가 처음에 작게 시작합니다. */
-    transition: opacity 1s ease-out, transform 1s ease-out; /* 트랜지션 효과를 설정합니다. */
-  }
-  
-  .image-transition-enter-active {
-    opacity: 1; /* 이미지가 나타나면 투명도를 증가시킵니다. */
-    transform: scale(1); /* 이미지가 커지면서 나타납니다. */
-  }
-  
-  .image-transition-exit {
-    opacity: 1; /* 이미지가 나가기 전에 투명도를 높게 유지합니다. */
-    transform: scale(1); /* 이미지가 나가기 전에 크기를 유지합니다. */
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* 트랜지션 효과를 설정합니다. */
-  }
-  
-  .image-transition-exit-active {
-    opacity: 0; /* 이미지가 사라지면 투명도를 줄입니다. */
-    transform: scale(0.8); /* 이미지가 작아지면서 사라집니다. */
-  }
+.image-transition-enter-active {
+  opacity: 1; /* 이미지가 나타나면 투명도를 증가시킵니다. */
+  transform: scale(1); /* 이미지가 커지면서 나타납니다. */
+}
 
-  .parallax-second {
-  
+.image-transition-exit {
+  opacity: 1; /* 이미지가 나가기 전에 투명도를 높게 유지합니다. */
+  transform: scale(1); /* 이미지가 나가기 전에 크기를 유지합니다. */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* 트랜지션 효과를 설정합니다. */
+}
 
-    min-height: 70vh;
-  
-    position: relative;
-    overflow: hidden;
-    transition: opacity 0.5s ease;
-  }
+.image-transition-exit-active {
+  opacity: 0; /* 이미지가 사라지면 투명도를 줄입니다. */
+  transform: scale(0.8); /* 이미지가 작아지면서 사라집니다. */
+}
 
-  .parallax-third {
-  
+.parallax-second {
+  min-height: 70vh;
 
-    min-height: 70vh;
-  
-    position: relative;
-    overflow: hidden;
-    transition: opacity 0.5s ease;
-  }
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.5s ease;
+}
 
-  .parallax-fourth {
-  
+.parallax-third {
+  min-height: 70vh;
 
-    min-height: 70vh;
-  
-    position: relative;
-    overflow: hidden;
-    transition: opacity 0.5s ease;
-  }
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.5s ease;
+}
 
-  .Blossend{
-    border-bottom: 1px solid white;
-    padding-bottom: 5rem;
+.parallax-fourth {
+  min-height: 70vh;
 
-  }
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.5s ease;
+}
 
+.Blossend {
+  border-bottom: 1px solid white;
+  padding-bottom: 5rem;
+}
 
-  .Clementine{
-   border-bottom: 1px solid white;
-   padding-bottom: 5rem;
+.Clementine {
+  border-bottom: 1px solid white;
+  padding-bottom: 5rem;
+}
 
-  }
+.Nanba {
+  border-bottom: 1px solid rgb(171, 154, 154);
+  padding-bottom: 5rem;
+}
 
-  .Nanba{
-    border-bottom: 1px solid white;
-    padding-bottom: 5rem;
-  }
+.slide-in {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #353535;
+  transform-origin: bottom;
+}
 
-  .slide-in{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #353535;
-    transform-origin: bottom;
+.slide-out {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #353535;
+  transform-origin: top;
+}
 
-  }
+.slide-text {
+  display: flex;
 
-  .slide-out{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #353535;
-    transform-origin: top;
+  justify-self: center;
+  justify-content: center;
+  padding-top: 15rem;
 
-  }
+  font-size: 5rem;
+  font-weight: 800;
+}
 
-  .slide-text{
-   
-    display: flex;
-  
-    justify-self: center;
-    justify-content: center;
-    padding-top: 15rem;
-  
-    font-size: 5rem;
-    font-weight: 800;
+.slide-text span {
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+}
 
-  }
+.footprints {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  position: relative;
+}
 
-  .slide-text span{
-    flex-direction: column;
-    font-size: 20px;
-    font-weight: 400;
-    color: white;
-  }
+.footprints::before,
+.footprints::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease-out;
+}
+
+.footprints:hover::before {
+  color: #6930c3;
+  transform: translate(12px, -12px);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.footprints:hover::after {
+  color: #77efff;
+  transform: translate(24px, -24px);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.swiper {
+  max-width: 800px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-wrapper {
+  width: 100%;
+  height: 300px;
+}
+
+.swiper-slide {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: contain;
+}
+
+.swiper-pagination-bullet-active {
+  width: 15px;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.swiper {
+  --swiper-pagination-color: rgba(56, 245, 255, 1);
+  --swiper-pagination-bullet-inactive-color: white;
+}
+
+.button-next,
+.button-prev {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(56, 245, 255, 0.2);
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+}
+:is(.button-next, .button-prev):hover {
+  background-color: rgba(56, 245, 255, 0.3);
+}
+
+.button-next {
+  right: 10px;
+}
+.button-prev {
+  left: 10px;
+}
+.Swiper-project {
+  min-height: 100vh;
+}
